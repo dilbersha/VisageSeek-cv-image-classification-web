@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+<body>
+    <h1>Result</h1>
+    <img src="{{ url_for('static', filename='uploads/' + photo_path.split('/')[-1]) }}" alt="Uploaded Photo">
+    <p>Matching Images:</p>
+    <ul>
+        {% for image in matching_images %}
+            <li>{{ image }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to upload form</a>
+</body>
+</html>
